@@ -14,6 +14,7 @@ public class SmtpIoHandler extends IoHandlerAdapter {
     public SmtpIoHandler() {
         commands.add(new QuitCommand());
         commands.add(new EhloCommand());
+        commands.add(new FromCommand());
     }
 
     @Override
