@@ -13,11 +13,12 @@ public class SmtpIoHandler extends IoHandlerAdapter {
 
     public SmtpIoHandler() {
         commands.add(new QuitCommand());
+        commands.add(new EhloCommand());
     }
 
     @Override
     public void sessionCreated(IoSession session) throws Exception {
-        session.write("220 SMTP Test Server written with Apache MINA\r\n");
+        session.write("220 SMTP Test Server written with Apache MINA");
     }
 
     @Override

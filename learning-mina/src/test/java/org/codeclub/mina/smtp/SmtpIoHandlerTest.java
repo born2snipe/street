@@ -26,7 +26,7 @@ public class SmtpIoHandlerTest extends MockObjectTestCase {
     }
 
     public void test_sessionCreated() throws Exception {
-        session.expects(once()).method("write").with(eq("220 SMTP Test Server written with Apache MINA\r\n"));
+        session.expects(once()).method("write").with(eq("220 SMTP Test Server written with Apache MINA"));
 
         handler.sessionCreated((IoSession) session.proxy());
     }
